@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assessment Task</title>
+    <style>
+        *{
+            text-align: center;
+            box-sizing: border-box;
+        }
+        header, footer{
+            padding:20px;  
+            background-color: RGB(11, 37, 57);
+            color: #FFF;
+        }
+        .flex-container{
+            display: flex;
+            flex-wrap: wrap;
+            min-height: 400px;
+        }
+        .flex-container article, .flex-container aside{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding:50px;
+        }
+        .flex-container article {
+            flex: 70%;
+            background-color: RGB(145, 193, 212, 0.5);
+        }
+        .flex-container aside {
+            flex: 30%;
+            background-color: RGB(218, 226, 209);
+        }
+        
+        @media screen and (max-width: 768px) {
+            .flex-container{
+                flex-direction: column-reverse;
+            }
+            .flex-container article {
+                min-height: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header><h2>Header</h2></header>
+    <div class="flex-container">   
+        <article><h2>Article</h2></article>
+        <aside><h2>Aside</h2></aside>   
+    </div>
+    <footer><h2>Footer</h2></footer>
+</body>
+</html>
